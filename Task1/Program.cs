@@ -32,6 +32,8 @@ namespace Task1
                 WriteLine(yes);
                 return;
             }
+
+            WriteLine(no);
         }
 
         static void Main(string[] args)
