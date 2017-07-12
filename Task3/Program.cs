@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using static System.Console;
 
-namespace Task1
+namespace Task3
 {
     class Program
     {
