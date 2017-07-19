@@ -10,30 +10,18 @@ namespace Task3
 {
     class Program
     {
-        public static void test(double x, double y)
+        public static bool test(double x, double y)
         {
-            string yes = "Принадлежит";
-            string no = "Не принадлежит";
-
             if (y < 0)
-            {
-                WriteLine(no);
-                return;
-            }
+                return false;
 
             if (x * x + y * y < 1)
-            {
-                WriteLine(no);
-                return;
-            }
+                return false;
 
             if (x * x + y * y <= 4)
-            {
-                WriteLine(yes);
-                return;
-            }
+                return true;
 
-            WriteLine(no);
+            return false;
         }
 
         static void Main(string[] args)
@@ -48,8 +36,14 @@ namespace Task3
             while (!double.TryParse(ReadLine().Replace(".", ","), out y))
                 WriteLine("Введите число");
 
-            test(x,y);
-            
+            string yes = "Принадлежит";
+            string no = "Не принадлежит";
+
+            /*if(test(x,y))
+                WriteLine(yes);
+            else WriteLine(no);*/
+            WriteLine(test(x, y)? yes: no);
+
             ReadKey(true);
         }
     }
