@@ -12,14 +12,10 @@ namespace Task3
     {
         public static bool test(double x, double y)
         {
-            if (y < 0)
-                return false;
-
-            if (x * x + y * y < 1)
-                return false;
-
-            if (x * x + y * y <= 4)
-                return true;
+            if (y > 0)
+                if (x * x + y * y <= 4)
+                    if (x * x + y * y >= 1)
+                        return true;
 
             return false;
         }
