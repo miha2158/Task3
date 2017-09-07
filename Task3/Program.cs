@@ -25,14 +25,15 @@ namespace Task3
             double y = 0;
             while (!double.TryParse(ReadLine().Replace(".", ","), out y))
                 WriteLine("Введите число");
+            WriteLine();
 
-            string yes = "Принадлежит";
-            string no = "Не принадлежит";
+            /*string yes = "Принадлежит";
+            string no = "Не принадлежит";*/
 
             /*if(test(x,y))
                 WriteLine(yes);
             else WriteLine(no);*/
-            WriteLine(test(x, y)? yes: no);
+            WriteLine(test(x, y)? "0": x.ToString());
 
             ReadKey(true);
         }
