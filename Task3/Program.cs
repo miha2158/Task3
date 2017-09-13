@@ -6,7 +6,7 @@ namespace Task3
     {
         public static bool test(double x, double y)
         {
-            if (y > 0)
+            if (y >= 0)
                 if (x * x + y * y <= 4)
                     if (x * x + y * y >= 1)
                         return true;
@@ -25,16 +25,9 @@ namespace Task3
             double y = 0;
             while (!double.TryParse(ReadLine().Replace(".", ","), out y))
                 WriteLine("Введите число");
+
             WriteLine();
-
-            /*string yes = "Принадлежит";
-            string no = "Не принадлежит";*/
-
-            /*if(test(x,y))
-                WriteLine(yes);
-            else WriteLine(no);*/
             WriteLine(test(x, y)? "0": x.ToString());
-
             ReadKey(true);
         }
     }
